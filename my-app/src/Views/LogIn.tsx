@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {useAuth0} from '@auth0/auth0-react';
 class LogIn extends Component{
     render(){
         return(
