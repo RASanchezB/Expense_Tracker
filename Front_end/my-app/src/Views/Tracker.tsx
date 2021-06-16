@@ -4,7 +4,9 @@ class Tracker extends Component{
 
     Constructos(){
         expenseName: String;
-
+        expenseAmount: Number;
+        expenseCategory: String;
+        expenseDate: Date;
     }
 
     render(){
@@ -32,7 +34,26 @@ class Tracker extends Component{
                             required
                         />
                     </div>
-                    
+                    <div className="form-group mr-sm-2">
+                        <label>Select a category</label>
+                        <select 
+                            id="expenseCategory"
+                            className="form-control"
+                            placeholder="Category"
+                            required
+                        >
+                            <optgroup>
+                                <option value="Work">Work Related</option>
+                                <option value="Necesities">Necessities</option>
+                                <option value="Luxury">Luxury</option>
+                                <option value="Other">Other</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div className="form-group mr-sm-2">
+                        <label> Date for expense </label>
+                        <input type="date" id="expenseDate"/>
+                    </div>
                 </form>
             </div>
         )

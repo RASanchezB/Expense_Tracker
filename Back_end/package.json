@@ -1,0 +1,15 @@
+{
+  "name": "back_end",
+  "version": "1.0.0",
+  "description": "Backend for expenseTracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ricardo Sanchez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "twilio": "^3.63.1"
+  }
+}
