@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 
-class Home extends Component{
-    render(){
+const Home = () => {
         return(
             <div>
-                
+                <h1>Welcome to the Expense Tracker</h1>
+                <p>This website will manage and track the expenses that an individual does
+                    to help
+                </p>
             </div>
         )
     }
-}
 export default Home;

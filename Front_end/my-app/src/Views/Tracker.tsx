@@ -1,15 +1,14 @@
-import React, {Component} from "react";
+import React from "react";
 
-class Tracker extends Component{
+const Tracker = () =>{
 
-    Constructos(){
+    type expense = {
         expenseName: String;
         expenseAmount: Number;
         expenseCategory: String;
         expenseDate: Date;
     }
 
-    render(){
         return(
             <div id="Content">
                 <h2>Add Expense</h2>
@@ -58,4 +57,5 @@ class Tracker extends Component{
             </div>
         )
     }
-}
+
+export default Tracker;
