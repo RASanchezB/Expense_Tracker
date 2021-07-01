@@ -10,10 +10,13 @@ const Tracker = () => {
 
     return (
         <div id="Content">
-            <h2>Add Expense</h2>
+            <br/>
+            <h2>Tracker </h2>
+            <br/>
             <form onSubmit={(event) => {
                 event.preventDefault()
             }}>
+                <h3>Add an Expense</h3>
                 <div className="form-group mr-sm-2">
                     <input
                         id="expenseName"
@@ -49,7 +52,7 @@ const Tracker = () => {
                     </select>
                 </div>
                 <div className="form-group mr-sm-2">
-                    <label> Date for expense </label>
+                    <label> Date for expense:  </label>
                     <input type="date" id="expenseDate" />
                 </div>
             </form>
