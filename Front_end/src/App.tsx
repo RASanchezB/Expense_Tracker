@@ -11,7 +11,11 @@ function App() {
   
   return (
     <div>
-      <Navbar/>
+      <div>
+        <Navbar/>
+      </div>
+      <br/>
+      <br/>
       <div id="Header">
         <BrowserRouter>
           <div>
