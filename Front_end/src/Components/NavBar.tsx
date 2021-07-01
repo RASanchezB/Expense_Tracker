@@ -1,5 +1,4 @@
-import * as React from 'react'; 
-import { useState } from 'react';
+import React,{ useState }  from 'react';
 import NavBar from 'react-bootstrap/NavBar';
 import Nav from 'react-bootstrap/Nav';
 import Spinner from 'react-bootstrap/Spinner';
@@ -8,11 +7,10 @@ import {useAuth0} from '@auth0/auth0-react';
 
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false);
-    const Toggle = setOpen(!open)
-    const {user, loginWithRedirect, logout, isLoading} = useAuth0();
+    
+    const {user, loginWithRedirect, logout, isAuthenticated} = useAuth0();
     const logButton = () =>{
-        if(isLoading) return <Button><Spinner as="span" animation="grow" aria-hidden="true" /></Button>;
+        if(isAuthenticated) return <Button><Spinner as="span" animation="grow" aria-hidden="true" /></Button>;
         return user ? (
             <Button variant="secondary" onClick={()=> logout()}>Log Out</Button>
         ):(
@@ -22,7 +20,7 @@ const Navbar = () => {
     return(
         <div>
             <NavBar bg="dark" variant="dark" fixed="top" expand = "lg">
-                <NavBar.Brand href="/home" >TRACKER</NavBar.Brand>
+                <NavBar.Brand href="/" >TRACKER</NavBar.Brand>
                 <NavBar.Toggle aria-controls = "basic-navbar-nav"/>
                 <NavBar.Collapse id = "basic-navbar-nav">
                     <Nav className="mr-auto">
@@ -31,7 +29,6 @@ const Navbar = () => {
                         <Nav.Link>{logButton()}</Nav.Link>
                     </Nav>
                 </NavBar.Collapse>
-                
             </NavBar>
         </div>
     )
