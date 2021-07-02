@@ -14,6 +14,7 @@
     "@types/react-router-dom": "^5.1.7",
     "bootstrap": "4.6",
     "bootstrap-nav": "^0.0.1",
+    "mongoose": "^5.13.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-bootstrap-navbar": "^1.1.0",
