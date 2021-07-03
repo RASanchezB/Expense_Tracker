@@ -1,3 +1,4 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const expense = require('../model/expenseMdl');
+const expenses = require('../model/expenseMdl');
+const expense = express.Router();
