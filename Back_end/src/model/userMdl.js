@@ -1,7 +1,8 @@
-const mongoose = require('moongoose');
+const mongoose = require('mongoose');
 const userSchema = new mongoose.Shema(
     {
         sub:{
+            ApiKey: String,
             type: String,
             index: true,
             unique: true,
