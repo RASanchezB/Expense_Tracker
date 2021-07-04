@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Shema(
     {
         sub:{
-            ApiKey: String,
+            Key: String,
             type: String,
             index: true,
             unique: true,
