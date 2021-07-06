@@ -4,16 +4,11 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Auth0Provider } from '@auth0/auth0-react';
-
+import Auth0Providerhs from './auth0-provider-hs';
 ReactDOM.render(
-  <Auth0Provider
-    domain={process.env.REACT_APP_AUTH0_DOMAIN || ''}
-    clientId={process.env.REACT_APP_AUTH0_CLIENT_ID || ''}
-    redirect_Uri={`${window.location.origin}`}
-  >
-    <App/>
-  </Auth0Provider>,
+    <Auth0Providerhs>
+      <App/>
+    </Auth0Providerhs>,
   document.getElementById('root')
 );
 
